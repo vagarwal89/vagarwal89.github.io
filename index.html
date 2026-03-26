@@ -5,113 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vivek Kumar Agarwal | AI & Privacy Governance Leader</title>
     <style>
-        /* === Minimalist & Professional CSS Variables === */
         :root {
             --bg-color: #ffffff;
             --text-main: #1a1a1a;
             --text-muted: #666666;
-            --accent: #0047AB; /* Cobalt Blue for a trust/tech vibe */
+            --accent: #0047AB;
             --accent-hover: #003380;
             --section-bg: #f9f9f9;
             --border-color: #e0e0e0;
-            --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             --max-width: 900px;
         }
 
-        /* === Reset & Base Styles === */
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body { font-family: var(--font-family); color: var(--text-main); line-height: 1.6; background-color: var(--bg-color); }
         a { text-decoration: none; color: inherit; transition: color 0.2s ease; }
-        ul { list-style: none; }
-        h1, h2, h3 { font-weight: 700; line-height: 1.2; }
-
-        /* === Layout Utility === */
         .container { max-width: var(--max-width); margin: 0 auto; padding: 0 20px; }
         section { padding: 80px 0; }
 
-        /* === Navigation === */
         header { background: rgba(255, 255, 255, 0.95); position: fixed; width: 100%; top: 0; z-index: 1000; border-bottom: 1px solid var(--border-color); }
         nav { display: flex; justify-content: space-between; align-items: center; height: 70px; }
-        .logo { font-size: 1.2rem; font-weight: 700; color: var(--text-main); }
-        .nav-links { display: flex; gap: 30px; }
+        .logo { font-size: 1.2rem; font-weight: 700; }
+        .nav-links { display: flex; gap: 30px; list-style: none; }
         .nav-links a { font-size: 0.9rem; font-weight: 500; color: var(--text-muted); }
         .nav-links a:hover { color: var(--accent); }
 
-        /* === Hero Section (The Hook) === */
         #hero { padding: 150px 0 100px; text-align: center; background: radial-gradient(circle at 50% 50%, rgba(0,71,171,0.05) 0%, rgba(255,255,255,0) 100%); }
-        .profile-img { width: 140px; height: 140px; border-radius: 50%; object-fit: cover; margin-bottom: 25px; border: 4px solid white; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-        #hero h1 { font-size: 2.8rem; margin-bottom: 15px; }
-        .hero-headline { font-size: 1.4rem; color: var(--accent); font-weight: 500; margin-bottom: 25px; max-width: 700px; margin-left: auto; margin-right: auto; }
-        .hero-subheadline { font-size: 1.1rem; color: var(--text-muted); max-width: 600px; margin: 0 auto 35px; }
-        .btn-group { display: flex; gap: 15px; justify-content: center; }
-        .btn { padding: 12px 24px; border-radius: 6px; font-weight: 600; font-size: 0.9rem; transition: background 0.2s ease, transform 0.1s ease; }
-        .btn:active { transform: translateY(1px); }
-        .btn-primary { background-color: var(--accent); color: white; }
-        .btn-primary:hover { background-color: var(--accent-hover); }
-        .btn-secondary { background-color: white; color: var(--text-main); border: 1px solid var(--border-color); }
-        .btn-secondary:hover { background-color: #f5f5f5; }
+        /* CHANGE 'your-image-filename.jpg' TO YOUR ACTUAL FILENAME */
+        .profile-img { width: 160px; height: 160px; border-radius: 50%; object-fit: cover; margin-bottom: 25px; border: 4px solid white; box-shadow: 0 4px 15px rgba(0,0,0,0.1); background-color: #eee; }
+        #hero h1 { font-size: 2.8rem; margin-bottom: 10px; }
+        .hero-headline { font-size: 1.4rem; color: var(--accent); font-weight: 500; margin-bottom: 20px; }
+        .hero-sub { color: var(--text-muted); max-width: 700px; margin: 0 auto 30px; }
 
-        /* === About Section === */
-        #about { background-color: var(--section-bg); }
-        .about-wrapper { display: grid; grid-template-columns: 2fr 1fr; gap: 50px; align-items: start; }
-        .about-text p { margin-bottom: 20px; color: var(--text-main); }
-        .about-text p.lead { font-size: 1.1rem; font-weight: 500; color: var(--text-main); }
-        .cert-list li { font-size: 0.85rem; background: white; padding: 10px 15px; border-radius: 6px; margin-bottom: 10px; border: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center; }
-        .cert-org { color: var(--text-muted); font-weight: 500; }
-
-        /* === Experience Section === */
-        #experience { border-bottom: 1px solid var(--border-color); }
-        .timeline { position: relative; }
-        .timeline-item { position: relative; padding-left: 35px; margin-bottom: 60px; }
-        .timeline-item:last-child { margin-bottom: 0; }
-        .timeline-item::before { content: ''; position: absolute; left: 0; top: 5px; width: 12px; height: 12px; border-radius: 50%; background-color: var(--accent); }
-        .timeline-item::after { content: ''; position: absolute; left: 5px; top: 25px; width: 2px; height: calc(100% + 40px); background-color: var(--border-color); }
-        .timeline-item:last-child::after { display: none; }
-        .job-header { display: flex; justify-content: space-between; align-items: start; margin-bottom: 10px; }
-        .job-title h3 { font-size: 1.2rem; }
-        .company { font-weight: 600; color: var(--accent); }
-        .date-location { font-size: 0.9rem; color: var(--text-muted); text-align: right; }
-        .job-summary { font-style: italic; color: var(--text-muted); margin-bottom: 15px; font-size: 0.95rem; }
-        .job-bullets li { margin-bottom: 8px; font-size: 0.95rem; color: var(--text-main); position: relative; padding-left: 15px; }
-        .job-bullets li::before { content: '→'; position: absolute; left: 0; color: var(--accent); }
-
-        /* === Impact Metrics Grid === */
-        .metrics-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 40px; }
-        .metric-card { background: white; padding: 25px; border-radius: 8px; border: 1px solid var(--border-color); text-align: center; }
-        .metric-value { font-size: 2.2rem; font-weight: 700; color: var(--accent); margin-bottom: 5px; }
-        .metric-label { font-size: 0.9rem; color: var(--text-muted); font-weight: 500; line-height: 1.3; }
-
-        /* === Research & Publications === */
-        #research { background-color: var(--section-bg); }
-        .research-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-        .research-card { background: white; padding: 25px; border-radius: 8px; border: 1px solid var(--border-color); transition: transform 0.2s ease, box-shadow 0.2s ease; display: flex; flex-direction: column; justify-content: space-between; }
-        .research-card:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
-        .res-category { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; color: var(--accent); font-weight: 700; margin-bottom: 10px; }
-        .res-title { font-size: 1.05rem; font-weight: 600; margin-bottom: 10px; line-height: 1.4; color: var(--text-main); }
-        .res-desc { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 20px; flex-grow: 1; }
-        .res-link { font-size: 0.85rem; font-weight: 600; color: var(--accent); display: flex; align-items: center; gap: 5px; }
-
-        /* === Contact Section === */
-        #contact { text-align: center; padding-bottom: 100px; }
-        .contact-text { max-width: 500px; margin: 0 auto 40px; color: var(--text-muted); }
-        .social-links { display: flex; justify-content: center; gap: 20px; }
-        .social-btn { padding: 10px 20px; border-radius: 6px; border: 1px solid var(--border-color); font-size: 0.9rem; font-weight: 500; background: white; }
-        .social-btn:hover { background: #f5f5f5; border-color: #d0d0d0; }
-
-        /* === Section Titles === */
         .section-title { font-size: 2rem; margin-bottom: 50px; text-align: center; position: relative; padding-bottom: 15px; }
         .section-title::after { content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 50px; height: 3px; background-color: var(--accent); }
 
-        /* === Responsiveness === */
-        @media (max-width: 768px) {
-            #hero h1 { font-size: 2rem; }
-            .hero-headline { font-size: 1.1rem; }
-            .about-wrapper, .research-grid { grid-template-columns: 1fr; }
-            .job-header { flex-direction: column; }
-            .date-location { text-align: left; margin-top: 5px; }
-            .metrics-grid { grid-template-columns: 1fr; }
-            .nav-links { display: none; } /* Add a hamburger menu for better mobile UX */
-        }
+        .timeline-item { position: relative; padding-left: 35px; margin-bottom: 50px; border-left: 2px solid var(--border-color); }
+        .timeline-item::before { content: ''; position: absolute; left: -7px; top: 5px; width: 12px; height: 12px; border-radius: 50%; background-color: var(--accent); }
+        .job-header { display: flex; justify-content: space-between; margin-bottom: 10px; }
+        .company { font-weight: 700; color: var(--accent); }
+        .job-bullets { margin-top: 10px; padding-left: 20px; font-size: 0.95rem; }
+        .job-bullets li { margin-bottom: 6px; }
+
+        #research { background: var(--section-bg); }
+        .research-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .res-card { background: white; padding: 20px; border: 1px solid var(--border-color); border-radius: 8px; }
+        .res-link { color: var(--accent); font-weight: 600; font-size: 0.85rem; margin-top: 15px; display: inline-block; }
+
+        footer { text-align: center; padding: 60px 0; border-top: 1px solid var(--border-color); }
+        .social-links a { margin: 0 15px; font-weight: 600; color: var(--accent); }
     </style>
 </head>
 <body>
@@ -121,8 +63,8 @@
             <nav>
                 <div class="logo">Vivek Kumar Agarwal</div>
                 <ul class="nav-links">
-                    <li><a href="#hero">Overview</a></li>
-                    <li><a href="#experience">Impact</a></li>
+                    <li><a href="#hero">About</a></li>
+                    <li><a href="#experience">Experience</a></li>
                     <li><a href="#research">Research</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
@@ -132,171 +74,93 @@
 
     <section id="hero">
         <div class="container">
-            <img src="image_0.png" alt="Vivek Kumar Agarwal" class="profile-img">
+            <img src="profile.jpg" alt="Vivek Kumar Agarwal" class="profile-img">
             <h1>Vivek Kumar Agarwal</h1>
-            <p class="hero-headline">AI Safeguards & Risk Governance Leader at Meta</p>
-            <p class="hero-subheadline">Operationalizing trust, safety, and accountability for GenAI products used by 3.2 billion people daily. I build the systems that measure model risk and ensure safer deployment.</p>
-            <div class="btn-group">
-                <a href="https://www.linkedin.com/in/vivekagarwal20/" class="btn btn-primary" target="_blank">LinkedIn Profile</a>
-                <a href="#contact" class="btn btn-secondary">Get In Touch</a>
-            </div>
-        </div>
-    </section>
-
-    <section id="about">
-        <div class="container">
-            <h2 class="section-title">Mission & Expertise</h2>
-            <div class="about-wrapper">
-                <div class="about-text">
-                    <p class="lead">AI governance leader with over 15 years of experience building the programs, systems, and safeguards that keep complex technology products safe, accountable, and compliant at massive scale.</p>
-                    <p>I specialize in the critical intersection of policy, research, engineering, and product. My mission is to translate high-level AI ethics principles into operational technical guardrails, red-teaming programs, and automated detection systems that directly reduce model harm without sacrificing innovation speed.</p>
-                    <p>Previously, I led a 30-person governance team at American Express through complex federal regulatory examinations.</p>
-                </div>
-                <div class="about-certs">
-                    <h3>Core Competencies</h3>
-                    <ul class="cert-list">
-                        <li>AI Red Teaming & Evals</li>
-                        <li>Generative AI Guardrails</li>
-                        <li>Risk Observability Platforms</li>
-                        <li>Safety by Design (Sbd)</li>
-                        <li>EU AI Act & NIST AI RMF</li>
-                        <li>Regulatory Engagement (FTC)</li>
-                    </ul>
-                </div>
-            </div>
+            <p class="hero-headline">AI & Privacy Risk Governance Leader</p>
+            <p class="hero-sub">15+ years of experience building AI safeguards, detection systems, and risk infrastructure for products used by 3.2 billion people at Meta. [cite: 6, 7, 21]</p>
         </div>
     </section>
 
     <section id="experience">
         <div class="container">
-            <h2 class="section-title">Professional Leadership</h2>
+            <h2 class="section-title">Professional Experience</h2>
             
-            <div class="timeline">
-                
-                <div class="timeline-item">
-                    <div class="job-header">
-                        <div class="job-title">
-                            <h3>AI Governance & Safeguards Program Manager</h3>
-                            <p class="company">Meta Platforms Inc.</p>
-                        </div>
-                        <div class="date-location">
-                            2022 – Present<br>Seattle, WA
-                        </div>
+            <div class="timeline-item">
+                <div class="job-header">
+                    <div>
+                        <span class="company">Meta Platforms Inc.</span><br>
+                        <strong>AI Governance & Safeguards Program Manager</strong>
                     </div>
-                    <p class="job-summary">Owns AI risk governance and compliance oversight across Facebook, Instagram, WhatsApp, Messenger, and the Llama/Avocado model families.</p>
-                    <ul class="job-bullets">
-                        <li><b>GenAI Safety Leadership:</b> Built and led the red-teaming and evals program for Instagram Reels, WhatsApp AI, and Llama-based tools. Translated safety findings into automated guardrail definitions.</li>
-                        <li><b>Global Compliance Deployment:</b> Directed EU AI Act readiness, deploying safeguard controls across 40+ high-risk AI systems six months ahead of enforcement timelines.</li>
-                        <li><b>Risk Observability:</b> Architected Meta’s AI safeguards metrics platform, a central system used by executives to track live risk signals, bias alerts, and production model health.</li>
-                        <li><b>Process Efficiency:</b> Redesigned risk assessment workflows using automation, cutting review time from 10 days to under 4 hours and handling 3x volume.</li>
-                    </ul>
+                    <div style="text-align:right; font-size: 0.9rem; color: var(--text-muted);">2022 – Present [cite: 19]<br>Seattle, WA [cite: 20]</div>
                 </div>
-
-                <div class="timeline-item">
-                    <div class="job-header">
-                        <div class="job-title">
-                            <h3>Sr. Compliance Manager | Third-Party Risk</h3>
-                            <p class="company">American Express</p>
-                        </div>
-                        <div class="date-location">
-                            2019 – 2022<br>Phoenix, AZ
-                        </div>
-                    </div>
-                    <p class="job-summary">Led a 30-person GRC team managing operational, security, and privacy risk across 5,000+ third-party vendors.</p>
-                    <ul class="job-bullets">
-                        <li><b>Regulatory Remediation:</b> Managed relations with the Federal Reserve, OCC, and FFIEC, closing 100+ corrective action plans to reduce open regulatory findings by 80%.</li>
-                        <li><b>Board reporting:</b> Built the KPI/KRI dashboard framework used in C-suite Operational Risk Committee meetings.</li>
-                    </ul>
-                </div>
+                <ul class="job-bullets">
+                    <li>Led GenAI red-teaming and safety evals for Llama, Avocado, and WhatsApp AI Assistant. [cite: 21, 30]</li>
+                    <li>Reduced AI incident response time by 70% through a real-time risk observability platform. [cite: 26]</li>
+                    <li>Operationalized EU AI Act and NIST AI RMF compliance across 40+ high-risk systems. [cite: 27, 29]</li>
+                </ul>
             </div>
 
-            <div class="metrics-grid">
-                <div class="metric-card">
-                    <div class="metric-value">70%</div>
-                    <div class="metric-label">Reduction in AI Incident Response Time</div>
+            <div class="timeline-item">
+                <div class="job-header">
+                    <div>
+                        <span class="company">American Express</span><br>
+                        <strong>Sr. Compliance Manager</strong>
+                    </div>
+                    <div style="text-align:right; font-size: 0.9rem; color: var(--text-muted);">2019 – 2022 [cite: 39]<br>Phoenix, AZ [cite: 39]</div>
                 </div>
-                <div class="metric-card">
-                    <div class="metric-value">62%</div>
-                    <div class="metric-label">Decrease in Policy Violation Incidents via GenAI Guardrails</div>
-                </div>
-                <div class="metric-card">
-                    <div class="metric-value">46%</div>
-                    <div class="metric-label">Improved Time-to-Market through Risk Reporting Automation</div>
-                </div>
+                <ul class="job-bullets">
+                    <li>Led a 30-person GRC team managing privacy and operational risk for 5,000+ vendors. [cite: 40]</li>
+                    <li>Closed 100+ regulatory action plans with the Federal Reserve and OCC. [cite: 42, 43]</li>
+                </ul>
             </div>
 
+            <div class="timeline-item">
+                <div class="job-header">
+                    <div>
+                        <span class="company">Tata Consultancy Services (TCS)</span><br>
+                        <strong>Third-Party Risk Consultant & Data Protection Engineer</strong>
+                    </div>
+                    <div style="text-align:right; font-size: 0.9rem; color: var(--text-muted);">2011 – 2019 [cite: 46, 50]<br>Phoenix, AZ & Bengaluru [cite: 46, 50]</div>
+                </div>
+                <ul class="job-bullets">
+                    <li>Implemented Big Data/BI automation for risk reporting, cutting manual effort by 80%. [cite: 47]</li>
+                    <li>Reduced time-to-market by 46% through standardized risk assessment programs. [cite: 47]</li>
+                    <li>Deployed identity access governance (Okta, MFA, SSO) for 10,000+ users. [cite: 51]</li>
+                    <li>Achieved SOX/PCI-DSS compliance by encrypting data across 50+ critical databases. [cite: 52]</li>
+                </ul>
+            </div>
         </div>
     </section>
 
     <section id="research">
         <div class="container">
-            <h2 class="section-title">Research & Contributions</h2>
+            <h2 class="section-title">Research & Publications</h2>
             <div class="research-grid">
-
-                <div class="research-card">
-                    <div>
-                        <div class="res-category">Book</div>
-                        <h3 class="res-title">Invisible Threats: Securing Privacy in the Era of Third-Party Relationships</h3>
-                        <p class="res-desc">Exploring complex privacy vulnerabilities and practical governance strategies in vendor ecosystems.</p>
-                    </div>
+                <div class="res-card">
+                    <strong>Book: Invisible Threats [cite: 65]</strong>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-top:5px;">Securing privacy in third-party ecosystems. [cite: 65]</p>
                     <a href="https://a.co/d/gO6jlUs" class="res-link" target="_blank">View on Amazon →</a>
                 </div>
-
-                <div class="research-card">
-                    <div>
-                        <div class="res-category">Peer-Reviewed Journal</div>
-                        <h3 class="res-title">Strategic Risk Assessment Framework for Third-Party Data Privacy</h3>
-                        <p class="res-desc">Published in the International Journal of Science and Research (IJSR).</p>
-                    </div>
-                    <a href="https://www.ijsr.net/getabstract.php?paperid=SR241006085732" class="res-link" target="_blank">Read Abstract →</a>
+                <div class="res-card">
+                    <strong>Peer-Reviewed Research [cite: 66]</strong>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-top:5px;">Scientific journals on risk frameworks and behavioral economics. [cite: 66]</p>
+                    <a href="https://www.scirp.org/journal/paperinformation?paperid=136784" class="res-link" target="_blank">Read Paper →</a>
                 </div>
-
-                <div class="research-card">
-                    <div>
-                        <div class="res-category">Scientific Publishing</div>
-                        <h3 class="res-title">Behavioral Economics Approach to Privacy by Design</h3>
-                        <p class="res-desc">Analysis of how behavioral models can enhance privacy adoption in product engineering.</p>
-                    </div>
-                    <a href="https://www.corporatecomplianceinsights.com/behavioral-economics-approach-privacy-design/" class="res-link" target="_blank">Read Article →</a>
-                </div>
-
-                <div class="research-card">
-                    <div>
-                        <div class="res-category">Media & Analysis</div>
-                        <h3 class="res-title">AI Governance & Third-Party Vendor Risk</h3>
-                        <p class="res-desc">Contributing author for Help Net Security, Security Boulevard, and Corporate Compliance Insights.</p>
-                    </div>
-                    <a href="https://www.helpnetsecurity.com/2024/12/18/vivekagarwal-meta-vendor-risk/" class="res-link" target="_blank">View Latest Analysis →</a>
-                </div>
-
             </div>
         </div>
     </section>
 
-    <section id="contact">
+    <footer id="contact">
         <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <p class="contact-text">Open to discussing Frontier AI Safety governance, technical red-teaming frameworks, or leadership roles in AI risk.</p>
+            <h2>Let's Connect</h2>
+            <p style="margin: 20px 0;">Vagarw89@gmail.com [cite: 3]</p>
             <div class="social-links">
-                <a href="mailto:Vagarw89@gmail.com" class="social-btn">Vagarw89@gmail.com</a>
-                <a href="https://www.linkedin.com/in/vivekagarwal20/" class="social-btn" target="_blank">LinkedIn</a>
-                <a href="https://github.com/vagarwal89" class="social-btn" target="_blank">GitHub (vagarwal89)</a>
+                <a href="https://www.linkedin.com/in/vivekagarwal20/" target="_blank">LinkedIn</a>
+                <a href="https://github.com/vagarwal89" target="_blank">GitHub</a>
             </div>
-            <div style="font-size: 0.8rem; color: #aaa; margin-top: 80px;">
-                FIP | AIGP | CIPP/US | CIPT | FRM
-            </div>
+            <p style="margin-top: 40px; font-size: 0.8rem; color: #999;">AIGP | FIP | CIPP/US | CIPT | FRM [cite: 59, 60]</p>
         </div>
-    </section>
+    </footer>
 
-    <script>
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
 </body>
 </html>
