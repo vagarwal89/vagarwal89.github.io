@@ -42,8 +42,11 @@
 
         /* --- Main Two Column Layout --- */
         .main-layout { display: grid; grid-template-columns: 1.6fr 1fr; gap: 50px; padding-top: 50px; }
-        
+
         h2.column-title { font-size: 1.3rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 30px; border-bottom: 2px solid var(--accent); display: inline-block; padding-bottom: 5px; }
+
+        /* About Blurb */
+        .about-blurb { font-size: 0.95rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 40px; padding: 16px 20px; border-left: 3px solid var(--accent); background: #f4f7fd; border-radius: 0 6px 6px 0; }
 
         /* Left Column: Experience */
         .exp-item { margin-bottom: 40px; }
@@ -54,7 +57,7 @@
         .exp-bullets { list-style: square; padding-left: 18px; font-size: 0.95rem; }
         .exp-bullets li { margin-bottom: 8px; }
 
-        /* Right Column: Research & Boards */
+        /* Shared res-item style used in both columns */
         .sidebar-section { margin-bottom: 50px; }
         .res-item { margin-bottom: 25px; padding-bottom: 15px; border-bottom: 1px dashed var(--border-color); }
         .res-item:last-child { border-bottom: none; }
@@ -66,7 +69,7 @@
         .board-item { margin-bottom: 15px; font-size: 0.9rem; }
         .board-org { font-weight: 700; display: block; }
 
-        footer { padding: 60px 0; border-top: 1px solid var(--border-color); text-align: center; font-size: 0.8rem; color: #999; }
+        footer { padding: 40px 0; border-top: 1px solid var(--border-color); text-align: center; font-size: 0.8rem; color: #999; }
 
         @media (max-width: 850px) {
             .hero-flex { flex-direction: column; text-align: center; }
@@ -119,10 +122,14 @@
     </div>
 
     <div class="container main-layout">
-        
+
+        <!-- LEFT COLUMN -->
         <div class="left-column">
+
+            <p class="about-blurb">15-year governance leader bridging AI safety, privacy regulation, and third-party risk — from FTC staff briefings to EU AI Act readiness across 40+ high-risk systems at Meta. IAPP Advisory Board member and published author shaping AI governance standards globally.</p>
+
             <h2 class="column-title">Professional Experience</h2>
-            
+
             <div class="exp-item">
                 <div class="exp-header">
                     <span class="company-name">Meta Platforms Inc.</span>
@@ -160,53 +167,50 @@
                     <li><b>Infrastructure:</b> Deployed OKTA/MFA/SSO for 10,000+ users and managed encryption across 50+ critical databases.</li>
                 </ul>
             </div>
-        </div>
 
-        <div class="right-column">
-            
-            <!-- PUBLICATIONS SECTION -->
-            <div class="sidebar-section">
-                <h2 class="column-title">Publications</h2>
-                
-                <div class="res-item">
-                    <span class="res-category">Published Book</span>
-                    <span class="res-name">Invisible Threats: Securing Privacy in the Era of Third-Party Relationships</span>
-                    <a href="https://www.amazon.com/Invisible-Threats-Securing-Third-Party-Relationships/dp/1836634129" class="res-link" target="_blank">Amazon Link</a>
-                </div>
-                
-                <div class="res-item">
-                    <span class="res-category">Peer-Reviewed Journal</span>
-                    <span class="res-name">Tracking & Remediating Third Party Data Breaches</span>
-                    <a href="https://www.ijsr.net/getabstract.php?paperid=SR241013000734" class="res-link" target="_blank">IJSR Publication</a>
-                </div>
+            <h2 class="column-title">Publications</h2>
 
-
-                <div class="res-item">
-                    <span class="res-category">Peer-Reviewed Journal</span>
-                    <span class="res-name">Strategic Risk Assessment Framework for Third-Party Data Privacy</span>
-                    <a href="https://www.ijsr.net/getabstract.php?paperid=SR241006085732" class="res-link" target="_blank">IJSR Publication</a>
-                </div>
-
-                <div class="res-item">
-                    <span class="res-category">Peer-Reviewed Journal</span>
-                    <span class="res-name">Behavioral Economics Approach to Privacy by Design</span>
-                    <a href="https://www.corporatecomplianceinsights.com/behavioral-economics-approach-privacy-design/" class="res-link" target="_blank">CCI Feature</a>
-                </div>
-
-                <div class="res-item">
-                    <span class="res-category">Academic Hub</span>
-                    <span class="res-name">Scientific Research Publishing (SCIRP) Portfolio</span>
-                    <a href="https://www.scirp.org/journal/paperinformation?paperid=136784" class="res-link" target="_blank">Full Portfolio</a>
-                </div>
-
-                <div class="res-item">
-                    <span class="res-category">Patent Pending</span>
-                    <span class="res-name">System and Method for Assessing Third-Party Data Risk (TPDR)</span>
-                    <p class="res-desc">Automated framework for quantifying data flow and integration risk.</p>
-                </div>
+            <div class="res-item">
+                <span class="res-category">Published Book</span>
+                <span class="res-name">Invisible Threats: Securing Privacy in the Era of Third-Party Relationships</span>
+                <a href="https://www.amazon.com/Invisible-Threats-Securing-Third-Party-Relationships/dp/1836634129" class="res-link" target="_blank">Amazon Link</a>
             </div>
 
-            <!-- MEDIA FEATURES SECTION -->
+            <div class="res-item">
+                <span class="res-category">Patent Pending</span>
+                <span class="res-name">System and Method for Assessing Third-Party Data Risk (TPDR)</span>
+                <p class="res-desc">Automated framework for quantifying data flow and integration risk.</p>
+            </div>
+
+            <div class="res-item">
+                <span class="res-category">Peer-Reviewed Journal</span>
+                <span class="res-name">Tracking & Remediating Third Party Data Breaches</span>
+                <a href="https://www.ijsr.net/getabstract.php?paperid=SR241013000734" class="res-link" target="_blank">IJSR Publication</a>
+            </div>
+
+            <div class="res-item">
+                <span class="res-category">Peer-Reviewed Journal</span>
+                <span class="res-name">Strategic Risk Assessment Framework for Third-Party Data Privacy</span>
+                <a href="https://www.ijsr.net/getabstract.php?paperid=SR241006085732" class="res-link" target="_blank">IJSR Publication</a>
+            </div>
+
+            <div class="res-item">
+                <span class="res-category">Peer-Reviewed Journal</span>
+                <span class="res-name">Behavioral Economics Approach to Privacy by Design</span>
+                <a href="https://www.corporatecomplianceinsights.com/behavioral-economics-approach-privacy-design/" class="res-link" target="_blank">CCI Feature</a>
+            </div>
+
+            <div class="res-item">
+                <span class="res-category">Academic Hub</span>
+                <span class="res-name">Scientific Research Publishing (SCIRP) Portfolio</span>
+                <a href="https://www.scirp.org/journal/paperinformation?paperid=136784" class="res-link" target="_blank">Full Portfolio</a>
+            </div>
+
+        </div>
+
+        <!-- RIGHT COLUMN -->
+        <div class="right-column">
+
             <div class="sidebar-section">
                 <h2 class="column-title">Media Features</h2>
 
